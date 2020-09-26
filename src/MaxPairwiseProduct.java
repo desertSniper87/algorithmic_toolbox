@@ -1,22 +1,18 @@
-package com.github.desertsniper87;
-
+import java.math.BigInteger;
 import java.util.*;
 import java.io.*;
 
 public class MaxPairwiseProduct {
-    static int getMaxPairwiseProduct(int[] numbers) {
+    static long getMaxPairwiseProduct(long[] numbers) {
         int length = numbers.length;
-
         Arrays.sort(numbers);
-
         return numbers[length-1] * numbers[length-2];
     }
-
 
     public static void main(String[] args) {
         FastScanner scanner = new FastScanner(System.in);
         int n = scanner.nextInt();
-        int[] numbers = new int[n];
+        long[] numbers = new long[n];
         for (int i = 0; i < n; i++) {
             numbers[i] = scanner.nextInt();
         }
@@ -53,4 +49,3 @@ public class MaxPairwiseProduct {
     }
 
 }
-
